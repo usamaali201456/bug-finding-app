@@ -1,0 +1,46 @@
+<p>
+  <strong>Bug Title:</strong>
+  <%= @bug.title %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @bug.deadline %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@bug.image.variant(resize:"500x500"), alt: "No image") if @bug.image %>
+</p>
+
+<p>
+  <strong>Bug Type</strong>
+  <%= @bug.bug_type %>
+</p>
+
+<p>
+  <strong>Project having bug:</strong>
+  <%= @bug.project.title %>
+</p>
+
+<p>
+  <strong>Bug status:</strong>
+  <%= @bug.status %>
+</p>
+
+
+<% if policy(@bug).assign_bug? %>
+  <% if current_user.id == @bug.dev_id %>
+    <%= link_to 'Resolve Bug', resolve_bug_project_bug_path(@bug.id), class: "btn btn-success form-control" %>
+
+  <% else %>
+    <%= link_to 'Assign Bug', assign_bug_project_bug_path(@bug.id), class: "btn btn-primary form-control" %><br/>
+  <% end %>
+<% else %>
+
+<%end%>
+
+  <% if policy(@bug).edit? %>
+    <%= link_to 'Edit', edit_project_bug_path(@project,@bug) %> |
+  <% end %>
+<%= link_to 'Back', project_bugs_path %>

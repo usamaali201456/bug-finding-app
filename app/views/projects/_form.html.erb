@@ -1,0 +1,21 @@
+<%= form_with model: @project, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title, required: true %>
+  </p>
+
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <%= render partial:'projects/selectusers',locals: {project: @project, users: @developers} %>
+
+  <%= render partial:'projects/selectusers', locals: {project: @project, users: @testers} %>
+  
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+

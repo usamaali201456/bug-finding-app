@@ -1,0 +1,19 @@
+<h1>Bugs of Project</h1>
+
+<table>
+  <tr>
+    <th>Descriptive Title</th>
+    <th>Deadline</th>
+    <th>Image</th>
+    <th>Bug Type</th>
+    <th>Bug Project</th>
+    <th>Status</th>
+
+    <th></th>
+  </tr>
+
+  <%= render @bugs, project: @project %>
+
+</table>
+
+ <td><%= link_to 'Back', projects_path %></td>

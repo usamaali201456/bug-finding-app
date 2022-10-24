@@ -1,0 +1,11 @@
+<tr>
+<td>
+<%= link_to project.title, project %>
+</td>
+
+<td><%= project.description %></td>
+<td><%= link_to 'All bugs', project_bugs_path(project),class: "btn btn-outline-danger btn-sm" %></td>
+  <% if current_user.qa? %>
+    <td><%= link_to 'Add bugs', new_project_bug_path(project),class: "btn btn-outline-danger btn-sm" %></td>
+  <% end %>
+</tr>

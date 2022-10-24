@@ -1,0 +1,7 @@
+ <div class="field">
+    <%= hidden_field_tag "project[user_ids][]", nil %>
+    <% users.each do |user| %>
+      <%= check_box_tag "project[user_ids][]",user.id, @project.user_ids.include?(user.id),id: dom_id(user) %>
+      <%= label_tag dom_id(user), user.name%><br>
+    <% end %>
+ </div>

@@ -1,0 +1,17 @@
+en:
+  authorization:
+    not_authorized: "You are not authorized to access this resource."
+    not_found: "The id record you are looking for does not exist."
+  bug:
+      created: "Bug created successfully."
+      updated: "Bug updated successfully."
+      deleted: "Bug deleted successfully."
+      assign_bug: "Bug is Assigned successfully to you"
+      assign_bug_failed: "Bug not assigned"
+      resolve_bug:  "Bug resolved successfully"
+      resolve_bug_failed: "Bug not resolved"
+  project:
+      created: "Project created successfully."
+      sure_message: "Are you sure?"
+
+

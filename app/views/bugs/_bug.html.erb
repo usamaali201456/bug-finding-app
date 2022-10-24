@@ -1,0 +1,9 @@
+<tr>
+  <td><%= bug.title %></td>
+  <td><%= bug.deadline %></td>
+  <td><%= image_tag(bug.image, alt: "No image", class: "bug-image-style") if bug.image %></td>
+  <td><%= bug.bug_type %></td>
+  <td><%= bug.project.title %></td>
+  <td><%= bug.status %></td>
+  <td><%= link_to 'Show', project_bug_path(project, bug) %></td>
+</tr>

@@ -18,7 +18,7 @@ application up and running.
 
   1-Checkout the Repository
   
-    git clone https://github.com/usamaalidevsinc/Bugzilla.git
+    git clone https://github.com/usamaali201456/bug-finding-app.git
     
   2- Then Install the versions of languages needed
   
@@ -50,7 +50,7 @@ application up and running.
     -Open a Pull Request
  
  ##### Contact
-    Usama Ali- usamaali@devsinc.com
+    Usama Ali- usamaali201456@gmail.com
 
   Happy Coding
 
